@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export {};
 
 /**
@@ -20,6 +22,6 @@ const books = [
   }
 ];
 
-const getTheTitles = () => {};
+const getTheTitles = (books:object[]) => { return books.map((obj:any) => obj.title)};
 
 console.log(getTheTitles(books)); // Expected output: ['4 hour work week', 'Tools of Titans']

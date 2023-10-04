@@ -8,7 +8,13 @@ export {};
  * and recreate the logic yourself.
  */
 
-const map = () => {};
+const map = (numbers:number[], func:(number:number) => number) => {
+  let result:number[] = [];
+  for (var i = 0; i < numbers.length; i++) {
+    result.push(func(numbers[i]));
+  }
+  return result;
+};
 
 const numbers = [1, 2, 3];
 const doubled = map(numbers, function(number) {

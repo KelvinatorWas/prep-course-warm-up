@@ -1,6 +1,8 @@
 export {};
 
-const removeFromArray = function() {};
+const removeFromArray = function(arr:number[], value:number, val2?:number):number[] {
+    return arr.filter((n:number) => n !== value && n !== val2);
+};
 
 console.log(removeFromArray([1, 2, 3, 4], 3)); // Expected output: [1, 2, 4]
 console.log(removeFromArray([1, 2, 3, 4], 7)); // Expected output: [1, 2, 3, 4]

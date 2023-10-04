@@ -8,4 +8,9 @@ export {};
  *  - https://javascript.info/array
  */
 
+ function stringToArray(array:string[]):string[] {
+    // shortest way
+    return array.map((str:string) => str.split(" ")).flat();
+}
+
 console.log(stringToArray(["John Doe"])); // Expected output: ['John', 'Doe']

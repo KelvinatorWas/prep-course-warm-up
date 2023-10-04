@@ -9,7 +9,9 @@ export {};
  */
 
 // You are allowed to change only this function
-function formatCurrency() {}
+function formatCurrency(number:number) {
+  return "£" + number.toFixed(2);
+}
 
 function calculateSalesTax(price: number) {
   return price * 0.21;
@@ -32,3 +34,5 @@ console.log("Total: " + formatCurrency(price + salesTax));
     > Total: £24.19
 
 */
+
+// DONE maybe

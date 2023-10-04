@@ -18,7 +18,12 @@ const library = [
   }
 ];
 
-const showStatus = () => {};
+const showStatus = (books:object[]) => {
+  console.log("\n");
+  books.forEach((book:any) => { 
+    return (book.isRead == true) ? console.log(`Already read '${book.title}' by ${book.author}`) : console.log(`You still need to read '${book.title}' by ${book.author}`)
+  });
+};
 
 showStatus(library);
 

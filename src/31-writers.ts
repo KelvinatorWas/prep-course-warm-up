@@ -35,3 +35,9 @@ const writers = [
     alive: true
   }
 ];
+
+const aliveWriters = (writers:object[]) => {
+  writers.filter((writer:any) => writer.alive == true).map((writer:any) => console.log(`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old, and work as a ${writer.occupation}.`));
+}
+
+aliveWriters(writers);

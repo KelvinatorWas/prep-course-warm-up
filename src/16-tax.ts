@@ -13,7 +13,10 @@ export {};
  */
 
 // You are allowed to change only this function
-function calculateSalesTax() {}
+function calculateSalesTax(price:number): string {
+    let value:number = (price * 0.21)
+    return value.toFixed(2)
+}
 
 const product = "You don't know JS";
 const price = 19.99;
@@ -32,3 +35,5 @@ console.log("Total: £" + (price + salesTax));
     > Total: £24.19
 
 */
+
+// Done 

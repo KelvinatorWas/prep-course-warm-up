@@ -1,14 +1,19 @@
 export {};
 
-function add() {}
+function add(fNum:number, sNum:number) { return fNum + sNum; }
 
-function subtract() {}
+function subtract(fNum:number, sNum:number) { return fNum - sNum; }
 
-function sum() {}
+function sum(arr:number[]) {
+    return arr.reduce((pNum:number, cNum:number) => add(pNum, cNum));
+}
 
-function multiply() {}
+function multiply(arr:number[]) {
+    return arr.reduce((pNum:number, cNum:number) => pNum*cNum);
+}
 
-function power() {}
+function power(fNum:number, sNum:number) { return fNum**sNum; }
+
 
 console.log(add(1, 2)); // Expected output: 3
 console.log(subtract(1, 2)); // Expected output: -1

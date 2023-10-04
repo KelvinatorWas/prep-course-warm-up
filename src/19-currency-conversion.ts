@@ -14,10 +14,11 @@ export {};
  * and use them in place of convertToUSD() and convertToBRL()
  */
 
+
 // You are allowed to change this function
-function convertToUSD(price) {}
+function convertToUSD(price:number) { return (1.4 * price + (price * 0.01)).toFixed(2) }
 // You are allowed to change this function
-function convertToBRL(price) {}
+function convertToBRL(price:number) { return (price / 0.16 + (price * 0.01)).toFixed(2)}
 
 const product = "You don't know JS";
 const price = 12.5;
@@ -35,3 +36,5 @@ console.log("Price: R$" + priceInBRL);
     > Price: R$?
 
 */
+
+// Done maybe?
