@@ -9,11 +9,11 @@ export {};
  */
 
 // You are allowed to change only this function
-function formatCurrency(number:number) {
+function formatCurrency(number:number): string {
   return "£" + number.toFixed(2);
 }
 
-function calculateSalesTax(price: number) {
+function calculateSalesTax(price: number): number {
   return price * 0.21;
 }
 
