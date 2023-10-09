@@ -5,6 +5,14 @@ export {};
  * "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
  */
 
+interface Writer {
+  firstName: string,
+  lastName: string,
+  occupation: string,
+  age: number,
+  alive: boolean
+}
+
 const writers = [
   {
     firstName: "Virginia",
@@ -36,8 +44,8 @@ const writers = [
   }
 ];
 
-const aliveWriters = (writers:object[]) => {
-  writers.filter((writer:any) => writer.alive == true).map((writer:any) => console.log(`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old, and work as a ${writer.occupation}.`));
+const aliveWriters = (writers:Writer[]) => {
+  writers.filter((writer) => writer.alive).forEach((writer) => console.log(`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old, and work as a ${writer.occupation}.`));
 }
 
 aliveWriters(writers);
