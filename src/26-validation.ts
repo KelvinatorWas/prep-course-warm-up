@@ -11,10 +11,12 @@ export {};
 const excludedNums = [6, 14, 91, 111];
 
 // You are allowed to edit only this function
-function validate(num:any) {
-  if (!Number.isInteger(num) || (excludedNums.includes(num)) ) return false; // checks if its not a int or float, if it is return false
-  
-  return true;
+function validate(num:string | number) {
+  if (typeof num === "number"){
+    if (excludedNums.includes(num)) return false;
+    if (Number.isInteger(num)) return true;
+  }
+  return false
 }
 
 console.log(validate(6));
