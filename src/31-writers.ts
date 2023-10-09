@@ -6,11 +6,11 @@ export {};
  */
 
 interface Writer {
-  firstName: string,
-  lastName: string,
-  occupation: string,
-  age: number,
-  alive: boolean
+  firstName: string;
+  lastName: string;
+  occupation: string;
+  age: number;
+  alive: boolean;
 }
 
 const writers = [
